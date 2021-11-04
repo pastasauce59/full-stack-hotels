@@ -22,7 +22,6 @@ export default class App extends Component {
     fetch("http://127.0.0.1:3000/hotels")
       .then((res) => res.json())
       .then((hotelsArr) => this.setState({ hotels: hotelsArr }));
-    console.log("mounted");
   }
 
   addToCart = (resvObj) => {
@@ -73,19 +72,15 @@ export default class App extends Component {
   };
 
   handleResvDelete = (resvDelete) => {
-    console.log(resvDelete);
-    console.log(this.state.currentUser);
-    // debugger
     let userResvNew = this.state.currentUserResv.filter(
       (resv) => resv.id !== resvDelete
     );
-    console.log(userResvNew);
+  
     fetch(`http://localhost:3000/reservations/${resvDelete}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
       .then((r) => {
-        console.log("in the response", r);
         this.setState({
           currentUserResv: userResvNew,
         });
@@ -94,8 +89,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state.currentUserResv);
-
     return (
       <Router>
         <NavBar

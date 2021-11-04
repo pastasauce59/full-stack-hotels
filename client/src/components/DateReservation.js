@@ -9,10 +9,6 @@ class DateReservation extends Component {
     endDate: "",
   };
 
-  example = () => {
-    console.log(this.state.startDate._d);
-  };
-
   handleSubmit = (e) => {
     e.preventDefault();
 

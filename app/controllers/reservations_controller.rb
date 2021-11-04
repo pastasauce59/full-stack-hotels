@@ -6,7 +6,6 @@ class ReservationsController < ApplicationController
     end
 
     def create
-        # byebug
         resv = Reservation.new(resv_params)
         if resv.valid?
             resv.save

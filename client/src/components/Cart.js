@@ -3,7 +3,6 @@ import CartCard from "./CartCard";
 
 class Cart extends Component {
   render() {
-    console.log(this.props.resvItems);
     return (
       <div class="text-center">
         {this.props.resvItems.length > 0 ? (
@@ -19,8 +18,7 @@ class Cart extends Component {
         <button
           disabled={this.props.resvItems.length > 0 ? false : true}
           class="btn btn-primary mr-1"
-          onClick={this.props.handleResvPost}
-        >
+          onClick={this.props.handleResvPost} >
           Checkout
         </button>
       </div>
