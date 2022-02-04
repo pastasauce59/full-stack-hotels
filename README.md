@@ -14,6 +14,6 @@ Full-Stack Hotels is an application for booking a room (or rooms) at your choice
 
 ## Installation 💻:
 - Fork and clone this repository onto your local environment. This repository contains both frontend and backend all in one.
-- Open a terminal and cd into this repository. Run "rails" to launch backend server and run on http://localhost:3000.
+- Open a terminal and cd into this repository. Run "rails s" to launch backend server and run on http://localhost:3000.
 - Open another terminal and cd into this repository again.
 - Run "npm start --prefix client" to start frontend on http://localhost:4000.

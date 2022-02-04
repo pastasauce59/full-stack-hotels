@@ -12,6 +12,13 @@ class DateReservation extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
+    console.log(e)
+
+    if( this.state.startDate === "" || this.state.endDate === ""){
+      this.setState({ startDate: "", endDate: "" })
+      alert("❗️: Please pick a start and end date to make a reservation.")
+    } else {
+
     let guestReservation = {
       startDate: this.state.startDate._d.toString().slice(0, 15),
       endDate: this.state.endDate._d.toString().slice(0, 15),
@@ -22,6 +29,7 @@ class DateReservation extends Component {
     this.props.addToCart(guestReservation);
     alert("Reservation Added To Cart!");
     this.setState({ startDate: "", endDate: "" });
+    }
   };
 
   render() {
