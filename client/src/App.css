@@ -32,11 +32,8 @@ div.user-resv img {
   display: flex;
   justify-content: center;
   align-content: center;
+  height: 100vh;
 }
-
-/* .login-signup {
-  display: inline-block;
-} */
 
 form {
   background-color: #fff8e7;
@@ -124,22 +121,6 @@ div.rooms img {
   max-height: 175px;
 }
 
-/* .user-resv {
-  
-
-  border-radius: 20px;
-  border-width: 25px;
-  border: 1px solid #fff8e7;
-  max-height: fit-content;
-  max-width: fit-content;
-  margin: auto;
-  width: 50%;
-  padding: 20px;
-  background-color: #528078;
-  text-align: center;
-  margin-bottom: 50px;
-} */
-
 .cart-father, .resv-container {
   display: flex;
   flex-direction: column;
@@ -148,6 +129,7 @@ div.rooms img {
   align-content: center;
   margin-top: 75px;
   margin-bottom: 75px;
+  height: 100vh;
 }
 
 .cart-container, .resv-container {
@@ -193,4 +175,20 @@ div.rooms img {
   text-align: center;
   /* height: 100vh; */
   margin-top: 475px;
+}
+
+.empty-cart {
+  color: #ffffff;
+  background-color: rgba(110, 104, 104, 0.70);
+  border-radius: 10px;
+  width: 35%;
+  text-align: center;
+}
+
+.counter {
+  background-color: #e06831;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 12px;
 }

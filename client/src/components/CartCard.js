@@ -10,7 +10,12 @@ class CartCard extends Component {
         <h5>Check in: {this.props.resvItems.startDate}</h5>
         <h5>Check out: {this.props.resvItems.endDate}</h5>
         <h5>Price Per Night: ${this.props.resvItems.room.price}</h5>
-        <br></br>
+        <button
+            class="btn btn-primary mr-1"
+            onClick={() => this.props.handleCartDelete(this.props.resvItems.startDate)}
+          >
+            Delete
+          </button>
       </div>
     );
   }

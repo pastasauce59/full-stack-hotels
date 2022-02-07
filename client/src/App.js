@@ -16,6 +16,7 @@ export default class App extends Component {
     currentUserResv: [],
     resvItems: [],
     loggedIn: false,
+    cartCount: 0
   };
 
   componentDidMount() {
@@ -25,7 +26,9 @@ export default class App extends Component {
   }
 
   addToCart = (resvObj) => {
-    this.setState({ resvItems: [...this.state.resvItems, resvObj] });
+    this.setState({ resvItems: [...this.state.resvItems, resvObj],
+     cartCount: this.state.cartCount +1
+    });
   };
 
   loggedIn = (user) => {
@@ -40,6 +43,7 @@ export default class App extends Component {
     this.setState({
       loggedIn: !this.state.loggedIn,
       currentUser: "",
+      resvItems: []
     });
     alert("You've been logged out");
   };
@@ -71,6 +75,13 @@ export default class App extends Component {
     });
   };
 
+  handleCartDelete = (cartItem) => {
+    this.setState({ 
+      resvItems: this.state.resvItems.filter( (resv) => resv.startDate !== cartItem),
+      cartCount: this.state.cartCount -1
+    })
+  } 
+
   handleResvDelete = (resvDelete) => {
     let userResvNew = this.state.currentUserResv.filter(
       (resv) => resv.id !== resvDelete
@@ -89,11 +100,13 @@ export default class App extends Component {
   };
 
   render() {
+    console.log(this.state.resvItems)
     return (
       <Router>
         <NavBar
           loggedIn={this.state.loggedIn}
           handleLogout={this.handleLogout}
+          cartCount={this.state.cartCount}
         />
         <Switch>
           <Route 
@@ -114,6 +127,7 @@ export default class App extends Component {
               resvItems={this.state.resvItems}
               hotels={this.state.hotels}
               handleResvPost={this.handleResvPost}
+              handleCartDelete={this.handleCartDelete}
             />
           </Route>
           <Route exact path="/reservations">

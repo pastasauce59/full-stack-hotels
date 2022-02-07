@@ -36,7 +36,6 @@ class Signup extends Component {
 
     return (
       <div className="login-signup-container">
-        <div className="login-signup">
         <form onSubmit={this.handleSubmit}>
           <h1>Signup</h1>
 
@@ -63,7 +62,6 @@ class Signup extends Component {
 
           <input class="btn btn-primary mr-1" type="submit" value="Signup" />
         </form>
-        </div>
       </div>
     );
   }

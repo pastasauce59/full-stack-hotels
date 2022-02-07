@@ -9,7 +9,8 @@ class NavBar extends Component {
         
         <Link to="/cart">
           <i class="fas fa-shopping-cart"></i> 
-          Cart
+          Cart {this.props.cartCount > 0 ? <span className="counter">{this.props.cartCount}</span> : null}
+          {console.log(this.props.cartCount)}
         </Link>
        
         <Link to="/hotels">

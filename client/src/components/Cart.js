@@ -8,7 +8,7 @@ class Cart extends Component {
          {this.props.resvItems.length > 0 ? (
             <h3>Your bookings:</h3>
           ) : (
-            <h3>Please add to your cart</h3>
+            <h3 className="empty-cart">Please add to your cart</h3>
           )}
 
           <button
@@ -20,17 +20,9 @@ class Cart extends Component {
 
         <div className="cart-container">
           {this.props.resvItems.map((resv) => (
-            <CartCard resvItems={resv} />
+            <CartCard resvItems={resv} handleCartDelete={this.props.handleCartDelete} />
           ))}
         </div>
-
-          {/* <button
-            disabled={this.props.resvItems.length > 0 ? false : true}
-            class="btn btn-primary mr-1"
-            onClick={this.props.handleResvPost} >
-            Checkout
-          </button> */}
-        
       </div>
     );
   }
