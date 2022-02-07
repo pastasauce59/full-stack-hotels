@@ -38,6 +38,7 @@ class AccountLogin extends Component {
     const { username, password, age } = this.state;
 
     return (
+      <div className="login-signup-container">
       <form onSubmit={this.handleSubmit}>
         <h1>Login</h1>
 
@@ -61,6 +62,7 @@ class AccountLogin extends Component {
 
         <input class="btn btn-primary mr-1" type="submit" value="Login" />
       </form>
+      </div>
     );
   }
 }

@@ -22,6 +22,22 @@ div.user-resv img {
   width: 200px;
 }
 
+/* .user-resv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.login-signup-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* .login-signup {
+  display: inline-block;
+} */
+
 form {
   background-color: #fff8e7;
   border: 1px solid #528078;
@@ -31,6 +47,8 @@ form {
   margin: 0 auto;
   padding: 0 1rem 1rem;
   border-radius: 10px;
+  /* justify-content: center; */
+  align-self: center;
 }
 
 form input {
@@ -45,14 +63,26 @@ form img {
   width: 150px;
 }
 
-div.links a {
-  color: #44726a;
+div.links {
+  background-color: rgba(110, 104, 104, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   position: fixed;
+  width: 100%;
+
+  top: 0px;
+  z-index:1;
+}
+
+div.links a {
+  /* display: flex; */
+  list-style-type: none;
+  color: #44726a;
   font-size: 30px;
   text-shadow: -1px 0 #f7ecd4, 0 1px #f7ecd4, 1px 0 #f7ecd4, 0 -1px #f7ecd4;
-  /* background-color: grey; */
-  /* text-align: right; */
-  /* padding: 10px */
+  margin-top: 12px;
+  text-decoration: none;
 }
 
 div.hotels {
@@ -68,7 +98,8 @@ div.hotels {
   padding: 20px;
   background-color: #528078;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 75px;
+  margin-top: 75px;
 }
 
 div.rooms {
@@ -93,11 +124,11 @@ div.rooms img {
   max-height: 175px;
 }
 
-.user-resv {
-  /* border-style:outset; */
+/* .user-resv {
+  
+
   border-radius: 20px;
   border-width: 25px;
-  /* border-color: #FFF8E7; */
   border: 1px solid #fff8e7;
   max-height: fit-content;
   max-width: fit-content;
@@ -107,22 +138,38 @@ div.rooms img {
   background-color: #528078;
   text-align: center;
   margin-bottom: 50px;
+} */
+
+.cart-father, .resv-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 75px;
+  margin-bottom: 75px;
 }
 
-.cart {
-  /* border-style:outset; */
+.cart-container, .resv-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.cart, .user-resv {
   border-radius: 20px;
   border-width: 25px;
-  /* border-color: #FFF8E7; */
   border: 1px solid #fff8e7;
   max-height: fit-content;
-  /* max-width:550px; */
-  margin: auto;
-  width: 250px;
+  max-width:550px;
+  margin: 5px;
   padding: 20px;
-  /* text-align: center; */
   background-color: #528078;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .cart img {
@@ -135,6 +182,15 @@ div.rooms img {
 }
 
 .fsh {
-  position: fixed;
+  /* position: fixed; */
   font-size: 50px;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* height: 100vh; */
+  margin-top: 475px;
 }

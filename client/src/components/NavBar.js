@@ -6,25 +6,26 @@ class NavBar extends Component {
     return (
       <div className="links">
         <h1 className="fsh">Full-stack Hotels</h1>
-        <br></br>
-        <br></br>
+        
         <Link to="/cart">
-          <i class="fas fa-shopping-cart"></i> Cart
+          <i class="fas fa-shopping-cart"></i> 
+          Cart
         </Link>
-        <br></br>
-        <p></p>
+       
         <Link to="/hotels">
           <i class="fa fa-home icon-home lnr lnr-home ion-ios-home-outline"></i>{" "}
           Hotels
         </Link>
-        <br></br>
-        <p></p>
+       
+        {this.props.loggedIn === false ? (
         <Link to="/signup">
           <i class="fa fa-user icon-user lnr lnr-user ion-ios-contact-outline"></i>{" "}
           Signup
         </Link>
-        <br></br>
-        <p></p>
+        ) : (
+          null
+        )}
+
         {this.props.loggedIn === false ? (
           <Link to="/login">
             <i class="fa fa-user icon-user lnr lnr-user ion-ios-contact-outline"></i>{" "}
@@ -36,8 +37,7 @@ class NavBar extends Component {
             Logout
           </Link>
         )}
-        <br></br>
-        <p></p>
+       
         {this.props.loggedIn ? (
           <Link to="/reservations">
             {" "}
@@ -45,7 +45,7 @@ class NavBar extends Component {
             Your Reservations
           </Link>
         ) : null}
-        <br></br>
+
       </div>
     );
   }

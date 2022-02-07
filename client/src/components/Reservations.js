@@ -4,7 +4,7 @@ import ResvCard from "./ResvCard";
 class Reservations extends Component {
   render() {
     return (
-      <div>
+      <div className="resv-container">
         {this.props.currentUserResv.map((resv) => (
           <ResvCard
             hotels={this.props.hotels}

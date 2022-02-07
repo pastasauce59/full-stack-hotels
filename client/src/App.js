@@ -130,6 +130,9 @@ export default class App extends Component {
               loggedIn={this.state.loggedIn}
             />
           </Route>
+          <div className="welcome-container">
+            <h2 className="welcome">Welcome to your next getaway.</h2>
+          </div>
         </Switch>
       </Router>
     );

@@ -35,32 +35,36 @@ class Signup extends Component {
     const { username, password, age } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <h1>Signup</h1>
+      <div className="login-signup-container">
+        <div className="login-signup">
+        <form onSubmit={this.handleSubmit}>
+          <h1>Signup</h1>
 
-        <label>Username</label>
-        <input
-          type="text"
-          name="username"
-          autoComplete="off"
-          value={username}
-          onChange={this.handleChange}
-        />
+          <label>Username</label>
+          <input
+            type="text"
+            name="username"
+            autoComplete="off"
+            value={username}
+            onChange={this.handleChange}
+          />
 
-        <label>Password</label>
-        <input
-          type="password"
-          name="password"
-          autoComplete="current-password"
-          value={password}
-          onChange={this.handleChange}
-        />
+          <label>Password</label>
+          <input
+            type="password"
+            name="password"
+            autoComplete="current-password"
+            value={password}
+            onChange={this.handleChange}
+          />
 
-        <label>Age</label>
-        <input type="age" name="age" value={age} onChange={this.handleChange} />
+          <label>Age</label>
+          <input type="age" name="age" value={age} onChange={this.handleChange} />
 
-        <input class="btn btn-primary mr-1" type="submit" value="Signup" />
-      </form>
+          <input class="btn btn-primary mr-1" type="submit" value="Signup" />
+        </form>
+        </div>
+      </div>
     );
   }
 }
