@@ -57,7 +57,7 @@ export default class App extends Component {
         guest_id: this.state.currentUser.id,
       };
 
-      fetch("http://localhost:3000/reservations", {
+      fetch("https://thawing-tor-30862.herokuapp.com/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ export default class App extends Component {
       (resv) => resv.id !== resvDelete
     );
   
-    fetch(`http://localhost:3000/reservations/${resvDelete}`, {
+    fetch(`https://thawing-tor-30862.herokuapp.com/reservations/${resvDelete}`, {
       method: "DELETE",
     })
       .then((r) => r.json())

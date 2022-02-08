@@ -13,7 +13,7 @@ class AccountLogin extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/login", {
+    fetch("https://thawing-tor-30862.herokuapp.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ class AccountLogin extends Component {
     .then((res) => {
       if (res.error) {
         alert(res.error);
-        window.location.href = "http://localhost:4000/signup";
+        window.location.href = "https://thawing-tor-30862.herokuapp.com/signup";
       } else {
         this.props.loggedIn(res);
         alert("Welcome Back");

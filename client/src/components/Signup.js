@@ -13,7 +13,7 @@ class Signup extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/guests", {
+    fetch("https://thawing-tor-30862.herokuapp.com/guests", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ class Signup extends Component {
           alert(res.error);
         } else {
           alert("Thanks for signing up");
-          window.location.href = "http://localhost:4000/login";
+          window.location.href = "https://thawing-tor-30862.herokuapp.com/login";
         }
       });
   };
