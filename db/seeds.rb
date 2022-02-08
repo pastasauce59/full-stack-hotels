@@ -19,8 +19,7 @@ Room.destroy_all
 Room.reset_pk_sequence
 puts "Previous seed data deleted"
 
-Guest.create(username: "Michael", password_digest: "abcd", age: 22)
-Guest.create(username: "Itche", password_digest: "abcd", age: 23)
+Guest.create(username: "Jdoe", password_digest: "abcd", age: 28)
 puts "Guests created"
 
 
