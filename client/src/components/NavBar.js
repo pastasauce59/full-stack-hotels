@@ -13,7 +13,7 @@ class NavBar extends Component {
           {console.log(this.props.cartCount)}
         </Link>
        
-        <Link to="/hotels">
+        <Link to="/our-hotels">
           <i class="fa fa-home icon-home lnr lnr-home ion-ios-home-outline"></i>{" "}
           Hotels
         </Link>

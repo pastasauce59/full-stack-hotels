@@ -20,7 +20,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3001/hotels")
+    fetch("https://thawing-tor-30862.herokuapp.com/hotels")
       .then((res) => res.json())
       .then((hotelsArr) => this.setState({ hotels: hotelsArr }));
   }
@@ -137,7 +137,7 @@ export default class App extends Component {
               handleResvDelete={this.handleResvDelete}
             />
           </Route>
-          <Route exact path="/hotels">
+          <Route exact path="/our-hotels">
             <HotelContainer
               hotels={this.state.hotels}
               addToCart={this.addToCart}
