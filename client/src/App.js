@@ -20,7 +20,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("https://thawing-tor-30862.herokuapp.com/hotels")
+    fetch("http://127.0.0.1:3000/hotels")
       .then((res) => res.json())
       .then((hotelsArr) => this.setState({ hotels: hotelsArr }));
   }
