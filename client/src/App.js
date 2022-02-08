@@ -20,7 +20,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("http://127.0.0.1:3000/hotels")
+    fetch("http://localhost:3000/hotels")
       .then((res) => res.json())
       .then((hotelsArr) => this.setState({ hotels: hotelsArr }));
   }
