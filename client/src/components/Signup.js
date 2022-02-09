@@ -27,7 +27,7 @@ class Signup extends Component {
           alert(res.error);
         } else {
           alert("Thanks for signing up");
-          window.location.href = `${API_ROOT}/login`;
+          window.location.href = `/login`;
         }
       });
   };

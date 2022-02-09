@@ -25,12 +25,12 @@ class AccountLogin extends Component {
     .then((res) => {
       if (res.error) {
         alert(res.error);
-        window.location.href = `${API_ROOT}/signup`;
+        window.location.href = `/signup`;
       } else {
         this.props.loggedIn(res);
         alert("Welcome Back");
         this.setState({ username: "", password: "" });
-        this.props.routerProps.history.push("/hotels");
+        this.props.routerProps.history.push("/our-hotels");
       }
     });
   };
