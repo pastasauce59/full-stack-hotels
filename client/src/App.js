@@ -70,8 +70,8 @@ export default class App extends Component {
         .then((res) =>
           this.setState({
             currentUserResv: [...this.state.currentUserResv, res],
-            //vv clearing cart vv
             resvItems: [],
+            cartCount: 0
           })
         );
     });
@@ -89,7 +89,7 @@ export default class App extends Component {
       (resv) => resv.id !== resvDelete
     );
   
-    fetch(`${API_ROOT}/${resvDelete}`, {
+    fetch(`${API_ROOT}/reservations/${resvDelete}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
@@ -102,7 +102,6 @@ export default class App extends Component {
   };
 
   render() {
-    console.log(this.state.resvItems)
     return (
       <Router>
         <NavBar

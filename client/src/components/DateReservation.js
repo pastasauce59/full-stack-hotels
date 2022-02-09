@@ -12,8 +12,6 @@ class DateReservation extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(e)
-
     if( this.state.startDate === "" || this.state.endDate === ""){
       this.setState({ startDate: "", endDate: "" })
       alert("❗️: Please pick a start and end date to make a reservation.")
