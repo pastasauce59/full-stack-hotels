@@ -8,6 +8,7 @@ import Reservations from "./components/Reservations";
 import Cart from "./components/Cart";
 import Signup from "./components/Signup";
 import "./custom-theme.scss";
+import { API_ROOT } from "./apiRoot";
 
 export default class App extends Component {
   state = {
@@ -20,7 +21,7 @@ export default class App extends Component {
   };
 
   componentDidMount() {
-    fetch("https://thawing-tor-30862.herokuapp.com/hotels")
+    fetch(`${API_ROOT}/hotels`)
       .then((res) => res.json())
       .then((hotelsArr) => this.setState({ hotels: hotelsArr }));
   }
@@ -43,7 +44,8 @@ export default class App extends Component {
     this.setState({
       loggedIn: !this.state.loggedIn,
       currentUser: "",
-      resvItems: []
+      resvItems: [],
+      cartCount: 0
     });
     alert("You've been logged out");
   };
@@ -57,7 +59,7 @@ export default class App extends Component {
         guest_id: this.state.currentUser.id,
       };
 
-      fetch("https://thawing-tor-30862.herokuapp.com/reservations", {
+      fetch(`${API_ROOT}/reservations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +89,7 @@ export default class App extends Component {
       (resv) => resv.id !== resvDelete
     );
   
-    fetch(`https://thawing-tor-30862.herokuapp.com/reservations/${resvDelete}`, {
+    fetch(`${API_ROOT}/${resvDelete}`, {
       method: "DELETE",
     })
       .then((r) => r.json())

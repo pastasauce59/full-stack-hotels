@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { API_ROOT } from "../apiRoot";
 
 class Signup extends Component {
   state = {
@@ -13,7 +14,7 @@ class Signup extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://thawing-tor-30862.herokuapp.com/guests", {
+    fetch(`${API_ROOT}/guests`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +27,7 @@ class Signup extends Component {
           alert(res.error);
         } else {
           alert("Thanks for signing up");
-          window.location.href = "https://thawing-tor-30862.herokuapp.com/login";
+          window.location.href = `${API_ROOT}/login`;
         }
       });
   };
