@@ -173,8 +173,7 @@ div.rooms img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* height: 100vh; */
-  margin-top: 475px;
+  margin-top: 75vh;
 }
 
 .empty-cart {
