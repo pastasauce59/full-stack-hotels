@@ -6,27 +6,15 @@ body {
 }
 
 .hotels img {
-  height: 500px;
-  width: 600px;
+  width: 100%;
   align-content: center;
   border-radius: 10px;
 }
-
-/* .rooms img {
-  height: 300px;
-  width: 450px;
-} */
 
 div.user-resv img {
   height: 150px;
   width: 200px;
 }
-
-/* .user-resv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .login-signup-container {
   display: flex;
@@ -44,8 +32,8 @@ form {
   margin: 0 auto;
   padding: 0 1rem 1rem;
   border-radius: 10px;
-  /* justify-content: center; */
   align-self: center;
+  align-items: center;
 }
 
 form input {
@@ -65,7 +53,7 @@ div.links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  position: fixed;
+  position: sticky;
   width: 100%;
 
   top: 0px;
@@ -80,6 +68,14 @@ div.links a {
   text-shadow: -1px 0 #f7ecd4, 0 1px #f7ecd4, 1px 0 #f7ecd4, 0 -1px #f7ecd4;
   margin-top: 12px;
   text-decoration: none;
+
+  height: 50px;
+  padding: 5px;
+}
+
+div.links a:hover {
+  border-radius: 20px;
+  background-color: rgba(110, 104, 104, 0.65);
 }
 
 div.hotels {
@@ -96,7 +92,6 @@ div.hotels {
   background-color: #528078;
   text-align: center;
   margin-bottom: 75px;
-  margin-top: 75px;
 }
 
 div.rooms {
@@ -121,7 +116,7 @@ div.rooms img {
   max-height: 175px;
 }
 
-.cart-father, .resv-container {
+.cart-message {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,7 +124,7 @@ div.rooms img {
   align-content: center;
   margin-top: 75px;
   margin-bottom: 75px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .cart-container, .resv-container {
@@ -150,7 +145,7 @@ div.rooms img {
   margin: 5px;
   padding: 20px;
   background-color: #528078;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   text-align: center;
 }
 
